@@ -2,7 +2,10 @@
   "name": "lumine",
   "version": "1.0.0",
   "description": "Provides components & services to speed up 2359 react native projects.",
-  "main": "build/index.js",
+  "main": "node_modules/expo/AppEntry.js",
+  "exports": {
+    ".": "./build/index.js"
+  },
   "types": "build/index.d.ts",
   "scripts": {
     "build": "expo-module build",
@@ -11,7 +14,11 @@
     "test": "expo-module test",
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module"
+    "expo-module": "expo-module",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
   },
   "keywords": [
     "react-native",
@@ -30,6 +37,7 @@
   "devDependencies": {
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.66.13",
+    "expo": "~45.0.0",
     "expo-module-scripts": "^2.0.0",
     "react": "17.0.2",
     "react-native": "0.68.2"
